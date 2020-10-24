@@ -1,6 +1,6 @@
 # group_project2
+* Group Members: Charles Hedeen, Franklin Truong, Jarrod Williams and Rob Savage.
     * Use 'virtualenv' to install requrired packages from 'requirements.txt' to run application.
-NBA analytics
 
 # PROJECT PROPOSAL
 
