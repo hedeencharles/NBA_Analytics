@@ -42,3 +42,7 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 
 ### Querying the database:
 * Basic querying code is available in the 'MongoDB_upload.ipynb' notebook. You will find a code block within the file that outlines how to query specific field values.
+
+## API
+
+## Webscraper
