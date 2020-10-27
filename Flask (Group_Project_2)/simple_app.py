@@ -10,11 +10,13 @@ client = pymongo.MongoClient(conn)
 
 app = Flask(__name__)
 
+#Create the Flask route for the index page
 @app.route('/index')
-def about():
+def index():
     return render_template("index.html")
 
-@app.route('/about)
+#Create the Flask route for the about page
+@app.route('/about')
 def about():
     return render_template("about.html")
 
