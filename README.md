@@ -46,3 +46,6 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 ## API
 
 ## Webscraper
+
+### Source citations:
+* https://data.world/datadavis/nba-salaries/workspace/file?filename=nba_salaries_1990_to_2018.csv 
