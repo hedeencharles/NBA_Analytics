@@ -13,7 +13,7 @@ with open ('../Datasets/Players.csv', newline='') as csvfile:
 #Convert the csv to JSON
 playerdata = json.dumps(playerdata)
 
-#create the Flask
+#create the Flask app
 app = Flask(__name__)
 
 #Create the Flask route for the index page
@@ -33,6 +33,8 @@ def data():
     return '''<h1>NBA Player Birth Data</h1>
 <p>API for referencing NBA Player Birthplaces.</p>'''
 
+@app.route('/api/v1.0/player_data')
+def (player_data)
 
 # @app.route('/data', methods=['GET'])
 # def api_all():
