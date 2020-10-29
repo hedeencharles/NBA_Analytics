@@ -1,19 +1,13 @@
 from flask import Flask
 from flask import render_template
 
-import csv
-import json
+# Establish connection to local host 27017
+conn = 'mongodb://localhost:27017'
 
-#Read in the Plyaer Birth csv
-with open ('../Datasets/Players.csv', newline='') as csvfile:
-     playerdata = csv.reader(csvfile, delimiter=' ', quotechar='|')
-    #  for row in playerdata:
-        #  print(row)
+# Connect to MongoClient
+client = pymongo.MongoClient(conn)
 
-#Convert the csv to JSON
-playerdata = json.dumps(playerdata)
 
-#create the Flask
 app = Flask(__name__)
 
 #Create the Flask route for the index page
@@ -26,17 +20,18 @@ def index():
 def about():
     return render_template("about.html")
 
+# app route for api
+@app.route("/api/v1.0/nba_player_info")
+def players():
+    """Return player data as json"""
+    # Create session link for Python to DB
+    query = db.testing_beds.find_one()
 
-#Create the Flask route for the data page
-@app.route('/data', methods=['GET'])
-def data():
-    return '''<h1>NBA Player Birth Data</h1>
-<p>API for referencing NBA Player Birthplaces.</p>'''
+    # Use a for loop to confirm data is now located in the database
+    all_players = []
+    for player in query:
+        all_players.append(player)
 
-
-# @app.route('/data', methods=['GET'])
-# def api_all():
-#     return json.dumps(playerdata)
-
-
+    return jsonify(all_results)
+    
 app.run(debug=True, port=5000)
