@@ -1,3 +1,21 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// Loading APIs
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// Load Data then call functions
+// d3.json('http://127.0.0.1:5000/api/global ').then(function(result,error) {
+
+  let ws_birthplace = result
+  heat_Map(ws_birthplace);
+})
+
+// Load Data then call functions
+// d3.json('http://127.0.0.1:5000/api/global ').then(function(result,error) {
+
+  let ws_birthplace = result
+  heat_Map(ws_birthplace);
+})
+
 var myMap = L.map("map", {
   center: [39.8283, -98.5795],
   zoom: 4
@@ -13,9 +31,25 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(myMap);
 
 
-$.getJSON("static/json/heatmap.json", function(data) {
+const url = 'mongodb://localhost:27017';
 
-console.log(data);
+const mongodb = require('mongodb');
+
+const MongoClient = mongodb.MongoClient;
+
+MongoClient.connect(url, (err, client) => {
+    if (err) {
+        throw err;
+        return;
+    }
+
+    console.log('Database connection successful');
+
+    // This objects holds the refrence to the db
+    const db = client.db(nba_players_db);
+
+    client.close();
+
 
   var heatArray = [];
 
