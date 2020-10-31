@@ -2,18 +2,36 @@ from flask import Flask
 from flask import render_template
 import pymongo
 
+<<<<<<< HEAD
 # # Establish connection to local host 27017
 # conn = 'mongodb://localhost:27017'
 
 # # Connect to MongoClient
+=======
+
+# from flask_pymongo import Pymongo
+
+# from flask_cors import CORS
+# import updatedb
+
+
+
+
+# Establish connection to local host 27017
+# conn = 'mongodb://localhost:27017'
+
+# Connect to MongoClient
+>>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
 # client = pymongo.MongoClient(conn)
 
+# app.config["MONGO_URI"] = 'mongodb://localhost:27017'
 
+# mongo = Pymongo(app)
+# servicerequests = mongo.dv.servicerequests
 
 #create the Flask app
-
-
 app = Flask(__name__)
+# CORS(app)
 
 #Create the Flask route for the index page
 @app.route('/')
@@ -32,6 +50,11 @@ def about():
 #     # Create session link for Python to DB
 #     query = db.testing_beds.find_one()
 
+@app.route("/api/v1/data", methods=['GET'])
+def serveData():
+    return jsonify(list(servicerequests.find({ },
+   { '_id': 0})))
+
 
 # #Create the Flask route for the data page
 # @app.route('/data', methods=['GET'])
@@ -47,7 +70,11 @@ def about():
 #     return json.dumps(playerdata)
 
 
+<<<<<<< HEAD
     # # Use a for loop to confirm data is now located in the database
+=======
+    # Use a for loop to confirm data is now located in the database
+>>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
     # all_players = []
     # for player in query:
     #     all_players.append(player)
