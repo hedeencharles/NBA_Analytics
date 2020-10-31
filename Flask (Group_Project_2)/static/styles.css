@@ -8,6 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -520,15 +524,151 @@ body {
     margin-bottom: 0;
   }
   /*--------------------------------------------------------------
+  # Graph 1
+  --------------------------------------------------------------*/
+  .graph1 {
+    background-color: white;
+  }
+  
+  .graph1 .content h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #052c3f;
+  }
+  
+  .graph1 .content h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+    color: #4d8090;
+  }
+  
+  .graph1 .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .graph1 .content ul li {
+    padding: 10px 0 0 28px;
+    position: relative;
+  }
+  
+  .graph1 .content ul i {
+    left: 0;
+    top: 7px;
+    position: absolute;
+    font-size: 20px;
+    color: #85b0be;
+  }
+  
+  .graph1 .content p:last-child {
+    margin-bottom: 0;
+  }
+
+    /*--------------------------------------------------------------
+  # Graph 2
+  --------------------------------------------------------------*/
+  .graph2 {
+    background-color: white;
+  }
+  
+  .graph2 .content h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #052c3f;
+  }
+  
+  .graph2 .content h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+    color: #4d8090;
+  }
+  
+  .graph2 .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .graph2 .content ul li {
+    padding: 10px 0 0 28px;
+    position: relative;
+  }
+  
+  .graph2 .content ul i {
+    left: 0;
+    top: 7px;
+    position: absolute;
+    font-size: 20px;
+    color: #85b0be;
+  }
+  
+  .graph2 .content p:last-child {
+    margin-bottom: 0;
+  }
+  /*--------------------------------------------------------------
+  # Graph 3
+  --------------------------------------------------------------*/
+  .graph3 {
+    background-color: white;
+  }
+  
+  .graph3 .content h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #052c3f;
+  }
+  
+  .graph3 .content h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+    color: #4d8090;
+  }
+  
+  .graph3 .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .graph3 .content ul li {
+    padding: 10px 0 0 28px;
+    position: relative;
+  }
+  
+  .graph3 .content ul i {
+    left: 0;
+    top: 7px;
+    position: absolute;
+    font-size: 20px;
+    color: #85b0be;
+  }
+  
+  .graph3 .content p:last-child {
+    margin-bottom: 0;
+  }
+
+
+
+  /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
   .footer {
-   background-color: white;
+   background-image: url("NBAlogos.png");
   }
 
   #footer {
-    background-color: white;
-    color: #fff;
+    background-image: url("NBAlogos.png");
+    color:black;
     font-size: 14px;
     position: relative;
   }
@@ -540,7 +680,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(1, 11, 16, 0.6);
+    background: white;
     z-index: 1;
   }
   
@@ -554,7 +694,7 @@ body {
   #footer .footer-top h3 {
     font-size: 36px;
     font-weight: 700;
-    color: #fff;
+    color: black;
     position: relative;
     font-family: "Poppins", sans-serif;
     padding-bottom: 0;
@@ -579,7 +719,6 @@ body {
     padding: 6px 10px 6px 8px;
     position: relative;
     border-radius: 4px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
   }
   
