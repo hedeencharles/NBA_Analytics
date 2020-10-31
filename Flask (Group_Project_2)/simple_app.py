@@ -14,13 +14,10 @@ from flask import render_template
 # conn = 'mongodb://localhost:27017'
 
 # Connect to MongoClient
-<<<<<<< HEAD
 #client = pymongo.MongoClient(conn)
-=======
 # client = pymongo.MongoClient(conn)
 
 # app.config["MONGO_URI"] = 'mongodb://localhost:27017'
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
 
 # mongo = Pymongo(app)
 # servicerequests = mongo.dv.servicerequests
@@ -67,18 +64,15 @@ def data():
 
 
     # Use a for loop to confirm data is now located in the database
-<<<<<<< HEAD
     #all_players = []
     #for player in query:
      #   all_players.append(player)
 
    # return jsonify(all_results)
-=======
     # all_players = []
     # for player in query:
     #     all_players.append(player)
 
     # return jsonify(all_results)
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
     
 app.run(debug=True, port=5000)
