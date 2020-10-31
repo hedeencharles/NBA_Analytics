@@ -1,6 +1,13 @@
 from flask import Flask
 from flask import render_template
+import pymongo
 
+<<<<<<< HEAD
+# # Establish connection to local host 27017
+# conn = 'mongodb://localhost:27017'
+
+# # Connect to MongoClient
+=======
 
 # from flask_pymongo import Pymongo
 
@@ -14,6 +21,7 @@ from flask import render_template
 # conn = 'mongodb://localhost:27017'
 
 # Connect to MongoClient
+>>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
 # client = pymongo.MongoClient(conn)
 
 # app.config["MONGO_URI"] = 'mongodb://localhost:27017'
@@ -26,7 +34,7 @@ app = Flask(__name__)
 # CORS(app)
 
 #Create the Flask route for the index page
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template("index.html")
 
@@ -35,12 +43,12 @@ def index():
 def about():
     return render_template("about.html")
 
-# app route for api
-@app.route("/api/v1.0/nba_player_info")
-def players():
-    """Return player data as json"""
-    # Create session link for Python to DB
-    query = db.testing_beds.find_one()
+# # app route for api
+# @app.route("/api/v1.0/nba_player_info")
+# def players():
+#     """Return player data as json"""
+#     # Create session link for Python to DB
+#     query = db.testing_beds.find_one()
 
 @app.route("/api/v1/data", methods=['GET'])
 def serveData():
@@ -48,11 +56,11 @@ def serveData():
    { '_id': 0})))
 
 
-#Create the Flask route for the data page
-@app.route('/data', methods=['GET'])
-def data():
-    return '''<h1>NBA Player Birth Data</h1>
-<p>API for referencing NBA Player Birthplaces.</p>'''
+# #Create the Flask route for the data page
+# @app.route('/data', methods=['GET'])
+# def data():
+#     return '''<h1>NBA Player Birth Data</h1>
+# <p>API for referencing NBA Player Birthplaces.</p>'''
 
 # @app.route('/api/v1.0/player_data')
 # def (player_data)
@@ -62,7 +70,11 @@ def data():
 #     return json.dumps(playerdata)
 
 
+<<<<<<< HEAD
+    # # Use a for loop to confirm data is now located in the database
+=======
     # Use a for loop to confirm data is now located in the database
+>>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
     # all_players = []
     # for player in query:
     #     all_players.append(player)
