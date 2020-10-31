@@ -37,7 +37,7 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 * Inside 'MongoDB_upload.ipynb', run the Kernel (If you want to run cell by cell, click into the top cell and click SHIFT + ENTER down the entire list of cells)
 * Navigate back to the 'MongoDB Compass Community App' and click the refresh button in the top left corner
 <!-- ![Refresh DB List](/Readme_files/Images/Refresh_DB_List.png) -->
-* You should now see a database titled '  final_testing_beds_db' and within that database, a collection titled 'testing_beds', and a list of documents as shown below
+* You should now see a database titled 'nba_players_db' and within that database, a three collection.
 <!-- ![Final Data Display](/Readme_files/Images/Final_Data_Display.png) -->
 
 ### Querying the database:
