@@ -26,14 +26,14 @@ app = Flask(__name__)
 # CORS(app)
 
 #Create the Flask route for the index page
-@app.route('/index')
+@app.route('/')
 def index():
     return render_template("index.html")
 
 #Create the Flask route for the about page
-@app.route('/about')
-def about():
-    return render_template("about.html")
+@app.route('/api')
+def api():
+    return render_template("api.html")
 
 # app route for api
 @app.route("/api/v1.0/nba_player_info")
