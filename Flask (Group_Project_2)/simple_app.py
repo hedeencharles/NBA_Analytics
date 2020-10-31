@@ -2,26 +2,10 @@ from flask import Flask
 from flask import render_template
 import pymongo
 
-<<<<<<< HEAD
 # # Establish connection to local host 27017
 # conn = 'mongodb://localhost:27017'
 
 # # Connect to MongoClient
-=======
-
-# from flask_pymongo import Pymongo
-
-# from flask_cors import CORS
-# import updatedb
-
-
-
-
-# Establish connection to local host 27017
-# conn = 'mongodb://localhost:27017'
-
-# Connect to MongoClient
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
 # client = pymongo.MongoClient(conn)
 
 # app.config["MONGO_URI"] = 'mongodb://localhost:27017'
@@ -70,11 +54,7 @@ def serveData():
 #     return json.dumps(playerdata)
 
 
-<<<<<<< HEAD
     # # Use a for loop to confirm data is now located in the database
-=======
-    # Use a for loop to confirm data is now located in the database
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
     # all_players = []
     # for player in query:
     #     all_players.append(player)
