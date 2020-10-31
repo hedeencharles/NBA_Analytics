@@ -54,20 +54,7 @@ def graph1():
 #     return json.dumps(playerdata)
 
 
-<<<<<<< HEAD
     # # Use a for loop to confirm data is now located in the database
-=======
-#<<<<<<< HEAD
-    # # Use a for loop to confirm data is now located in the database
-#=======
-    # Use a for loop to confirm data is now located in the database
-    #all_players = []
-    #for player in query:
-     #   all_players.append(player)
-
-   # return jsonify(all_results)
-#>>>>>>> 9556a60ec5444ce7bee787322dfc894bb8bc0787
->>>>>>> 074573905bb7a934789d22f55211261eb17b6951
     # all_players = []
     # for player in query:
     #     all_players.append(player)
