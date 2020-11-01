@@ -16,6 +16,8 @@ decorator==4.4.2
 defusedxml==0.6.0
 entrypoints==0.3
 Flask==1.1.2
+Flask-Cors==3.0.9
+Flask-PyMongo==2.3.0
 idna==2.8
 importlib-metadata==2.0.0
 ipykernel==5.3.4

@@ -2,23 +2,25 @@
 // Loading APIs
 //////////////////////////////////////////////////////////////////////////////////////////
 
-// Load Data then call functions
-// d3.json('http://127.0.0.1:5000/api/ws_birthplace').then(function(result,error) {
+Load Data then call functions
+d3.json('http://127.0.0.1:5000/api/ws_birthplace').then(function(result,error) {
 
   let ws_birthplace = result
   heat_Map(ws_birthplace);
+
+console.log(ws_birthplace);
 })
 
-// Load Data then call functions
-// d3.json('http://127.0.0.1:5000/api/player_salary').then(function(result,error) {
+Load Data then call functions
+d3.json('http://127.0.0.1:5000/api/player_salary').then(function(result,error) {
 
   let player_salary_info = result
   salary_Chart(player_salary_info);
 })
 
 
-// Load Data then call functions
-// d3.json('http://127.0.0.1:5000/api/player_ws').then(function(result,error) {
+Load Data then call functions
+d3.json('http://127.0.0.1:5000/api/player_ws').then(function(result,error) {
 
   let player_WS = result
   ws_Chart(player_WS);

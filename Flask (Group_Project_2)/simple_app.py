@@ -1,84 +1,54 @@
-from flask import Flask
+from flask import Flask, render_template, redirect, url_for, jsonify, request
 from flask import render_template
-import pymongo
-
-<<<<<<< HEAD
-# # Establish connection to local host 27017
-# conn = 'mongodb://localhost:27017'
-
-# # Connect to MongoClient
-=======
-
-# from flask_pymongo import Pymongo
-
+from flask_pymongo import PyMongo
 # from flask_cors import CORS
-# import updatedb
 
-
-
-
-# Establish connection to local host 27017
-# conn = 'mongodb://localhost:27017'
-
-# Connect to MongoClient
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
-# client = pymongo.MongoClient(conn)
-
-# app.config["MONGO_URI"] = 'mongodb://localhost:27017'
-
-# mongo = Pymongo(app)
-# servicerequests = mongo.dv.servicerequests
 
 #create the Flask app
 app = Flask(__name__)
 # CORS(app)
+
+# setup mongo db connection
+app.config["DEBUG"] = True
+
+app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
+mongo = PyMongo(app)
+
+# create variables for collections
+ws_birthplace_collection = mongo.db.WSbirthplace
+ws_player_collection = mongo.db.playerWS
+player_salary_collection = mongo.db.player_salary_info
+player_birthplace_collection = mongo.db.playerBirthplace
+
 
 #Create the Flask route for the index page
 @app.route('/')
 def index():
     return render_template("index.html")
 
-#Create the Flask route for the about page
-@app.route('/about')
-def about():
-    return render_template("about.html")
-
-# # app route for api
-# @app.route("/api/v1.0/nba_player_info")
-# def players():
-#     """Return player data as json"""
-#     # Create session link for Python to DB
-#     query = db.testing_beds.find_one()
-
-@app.route("/api/v1/data", methods=['GET'])
-def serveData():
-    return jsonify(list(servicerequests.find({ },
+# birthplace api
+@app.route('/api/ws_birthplace')
+def ws_birthplace():
+    return jsonify(list(ws_birthplace_collection.find({ },
    { '_id': 0})))
 
+# player salary api
+@app.route('/api/player_salary')
+def salary_player():
+    return jsonify(list(player_salary_collection.find({ },
+   { '_id': 0})))
 
-# #Create the Flask route for the data page
-# @app.route('/data', methods=['GET'])
-# def data():
-#     return '''<h1>NBA Player Birth Data</h1>
-# <p>API for referencing NBA Player Birthplaces.</p>'''
+# player salary api
+@app.route('/api/player_ws')
+def ws_player():
+    return jsonify(list(ws_player_collection.find({ },
+   { '_id': 0})))
 
-# @app.route('/api/v1.0/player_data')
-# def (player_data)
+# player salary api
+@app.route('/api/player_birthplace')
+def player_birthplace():
+    return jsonify(list(player_birthplace_collection.find({ },
+   { '_id': 0})))
 
-# @app.route('/data', methods=['GET'])
-# def api_all():
-#     return json.dumps(playerdata)
-
-
-<<<<<<< HEAD
-    # # Use a for loop to confirm data is now located in the database
-=======
-    # Use a for loop to confirm data is now located in the database
->>>>>>> 27ab8ee2c4726aadd676644da0e2019ce416ef05
-    # all_players = []
-    # for player in query:
-    #     all_players.append(player)
-
-    # return jsonify(all_results)
     
 app.run(debug=True, port=5000)
