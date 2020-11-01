@@ -19,6 +19,7 @@ ws_birthplace_collection = mongo.db.WSbirthplace
 ws_player_collection = mongo.db.playerWS
 player_salary_collection = mongo.db.player_salary_info
 player_birthplace_collection = mongo.db.playerBirthplace
+yearlyBirthplace_collection = mongo.db.yearlyBirthplace
 
 
 #Create the Flask route for the index page
@@ -48,6 +49,12 @@ def ws_player():
 @app.route('/api/player_birthplace')
 def player_birthplace():
     return jsonify(list(player_birthplace_collection.find({ },
+   { '_id': 0})))
+
+# yearly birthplace api
+@app.route('/api/yearly_birthplace')
+def yearly_birthplace():
+    return jsonify(list(yearlyBirthplace_collection.find({ },
    { '_id': 0})))
 
     
