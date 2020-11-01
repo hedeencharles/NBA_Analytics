@@ -33,7 +33,7 @@ d3.json('http://127.0.0.1:5000/api/player_ws').then(function(result,error) {
 
 function heat_Map(obj){
 
-var myMap = L.map("map", {
+var myMap = L.map("heatmap", {
   center: [39.8283, -98.5795],
   zoom: 4
 });
