@@ -9,6 +9,9 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
+  <!-- JQuery reference -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -29,6 +32,17 @@
 
   <!-- Template Main JS File -->
   <script src="static/js/main.js"></script>
+
+  <!-- Highchart line plot plug-ins -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <!-- Javascript index script -->
+  <script type="text/javascript" src="../static/js/index.js"></script>
+
 
   <!-- =======================================================
   * Template Name: Vlava - v2.1.0
@@ -62,14 +76,23 @@
           <li class="drop-down"><a href="">Drop Down</a>
 =======
           <li><a href="/">Home</a></li>
-          <li><a href="/api">API</a></li>
+          <li class="drop-down"><a href="#">API</a>
+            <ul>
+              <li><a href="/api/ws_birthplace">WS/Birthplace</a></li>
+              <li><a href="/api/player_ws">WS/Player</a></li>
+              <li><a href="/api/player_salary">Player Salary</a></li>
+              <li><a href="/api/player_birthplace">Player Birthplace</a></li>
+              <li><a href="/api/yearly_birthplace">Yearly Birthplace</a></li>
+            </ul>
+          </li>
           <li class="drop-down"><a href="#">Visualizations</a>
 >>>>>>> ab9a1f8ad69d102dd7301d577a6715e83a93f000
             <ul>
-              <li><a href="/graph1">Graph 1</a></li>
-              <li><a href="#">Graph 2</a></li>
-              <li><a href="#">Graph 3</a></li>
+              <li><a href="#graph1">Graph 1</a></li>
+              <li><a href="#graph2">Graph 2</a></li>
+              <li><a href="#graph3">Graph 3</a></li>
             </ul>
+          </li>
       </nav><!-- .nav-menu -->
 
     </div>
@@ -120,6 +143,92 @@
 
       </div>
     </section><!-- End About Section -->
+   
+   <!-- ======= Graph1 Section ======= -->
+
+    <section id="graph1" class="graph1">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <figure class="highcharts-figure">
+              <div id="container"></div>
+            </figure>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              <strong>Analysis of Avg Salary overtime:</strong>
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> The average salary per year increases relatively gradually bewteen 1990-2000</li>
+              <li><i class="ri-check-double-line"></i> Average salary on a decline from 2008-2013 (this correlates with the 2008 economic recession)</li>
+              <li><i class="ri-check-double-line"></i> Salary spikes in 2013 before falling again</li>
+              <li><i class="ri-check-double-line"></i> Salary increases at a greater rate between 2014 and 2017</li>
+              <li><i class="ri-check-double-line"></i> Compare Salary change with: <a href="https://datahub.io/core/cpi-us/view/1" target="_blank" > Inflation Graph</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+    </section>
+     <!-- ======= Graph2 Section ======= -->
+
+     <section id="graph2" class="graph2">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Graph2</h2>
+            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              In this project we looked at these questions:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
+              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
+              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
+              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
+            </ul>
+            <p class="font-italic">
+              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
+              — Magic Johnson
+            </p>
+          </div>
+        </div>
+
+
+    </section>
+       <!-- ======= Graph3 Section ======= -->
+
+    <section id="graph3" class="graph3">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Graph3</h2>
+            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              In this project we looked at these questions:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
+              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
+              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
+              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
+            </ul>
+            <p class="font-italic">
+              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
+              — Magic Johnson
+            </p>
+          </div>
+        </div>
+
+
+    </section>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -130,25 +239,13 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-6">
-            <h3>Vlava</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-          </div>
-        </div>
-
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
+            <h3>NBA</h3>
+            <p>Thank you for looking at our project</p>
           </div>
         </div>
 
         <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/hedeencharles/group_project2" class="github"><i class="bx bxl-github"></i></a>
         </div>
 
       </div>

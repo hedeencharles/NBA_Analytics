@@ -34,21 +34,23 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 <!-- ![MongoDB Compass Community App Home Page](/Readme_files/Images/MongoDB_Home_Screen.png) -->
 * In the repository folder you have cloned to your machine, open Jupyter Notebook by typing 'jupyter notebook' into the command line. Verify you are in the correct directory.
 * In Jupyter Notebook, navigate to the 'MongoDB_upload.ipynb' notebook
-* Inside 'MongoDB_upload.ipynb', run the Kernel (If you want to run cell by cell, click into the top cell and click SHIFT + ENTER down the entire list of cells)
+* Inside 'MongoDB_upload.ipynb', run the entire Kernel by clicking on the play button in the ribbon bar at the top of the window.
 * Navigate back to the 'MongoDB Compass Community App' and click the refresh button in the top left corner
 <!-- ![Refresh DB List](/Readme_files/Images/Refresh_DB_List.png) -->
-* You should now see a database titled '  final_testing_beds_db' and within that database, a collection titled 'testing_beds', and a list of documents as shown below
+* You should now see a database titled 'nba_players_db' and within that database, and five total collection.
 <!-- ![Final Data Display](/Readme_files/Images/Final_Data_Display.png) -->
 
 ### Querying the database:
-* Basic querying code is available in the 'MongoDB_upload.ipynb' notebook. You will find a code block within the file that outlines how to query specific field values.
+* Basic querying code is available in the 'MongoDB_upload.ipynb' notebook at the bottom of the page. You will find a code block within the file that outlines how to query specific fields and values within jupyter notebook. 
 
 ## API
+* Each API page we created can be found within the drop down menu at the top of our websites home page.
 
-## Webscraper
-
-### Source citations:
+## Source citations:
 * Player Salary Data:
   https://data.world/datadavis/nba-salaries/workspace/file?filename=nba_salaries_1990_to_2018.csv 
 * Player Birthplace Data:
   https://www.kaggle.com/drgilermo/nba-players-stats/data 
+* Player WinShare:
+
+  
