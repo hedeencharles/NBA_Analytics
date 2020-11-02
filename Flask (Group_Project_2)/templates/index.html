@@ -33,17 +33,6 @@
   <!-- Template Main JS File -->
   <script src="static/js/main.js"></script>
 
-  <!-- Highchart line plot plug-ins -->
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/data.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
-  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-  <!-- Javascript index script -->
-  <script type="text/javascript" src="../static/js/index.js"></script>
-
-
   <!-- =======================================================
   * Template Name: Vlava - v2.1.0
   * Template URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
@@ -69,8 +58,7 @@
           <li><a href="/">Home</a></li>
           <li class="drop-down"><a href="#">API</a>
             <ul>
-              <li><a href="/api/ws_birthplace">WS/Birthplace</a></li>
-              <li><a href="/api/player_ws">WS/Player</a></li>
+              <li><a href="/api/states_winshare">WS/State</a></li>
               <li><a href="/api/player_salary">Player Salary</a></li>
               <li><a href="/api/player_birthplace">Player Birthplace</a></li>
               <li><a href="/api/yearly_birthplace">Yearly Birthplace</a></li>
@@ -116,6 +104,34 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
+              <strong>Project Questions:</strong>
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Which states in the USA obtain the highest total WinShares (produced by players from those states)?</li>
+              <li><i class="ri-check-double-line"></i> How has the average NBA salary changed overtime? 1990-2017</li>
+              <li><i class="ri-check-double-line"></i> How has the diversity of the NBA players changed overtime?</li>
+            </ul>
+            <p class="font-italic">
+              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
+              — Magic Johnson
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+   
+   <!-- ======= Graph1 Section ======= -->
+
+    <section id="graph1" class="graph1">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <div id="heatmap"></div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
               In this project we looked at these questions:
             </p>
             <ul>
@@ -131,12 +147,11 @@
           </div>
         </div>
 
-      </div>
-    </section><!-- End About Section -->
-   
-   <!-- ======= Graph1 Section ======= -->
 
-    <section id="graph1" class="graph1">
+    </section>
+     <!-- ======= Graph2 Section ======= -->
+
+     <section id="graph2" class="graph2">
       <div class="container">
 
         <div class="row content">
@@ -161,36 +176,8 @@
 
 
     </section>
-     <!-- ======= Graph2 Section ======= -->
 
-     <section id="graph2" class="graph2">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <h2>Graph2</h2>
-            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              In this project we looked at these questions:
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
-              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
-              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
-              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
-            </ul>
-            <p class="font-italic">
-              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
-              — Magic Johnson
-            </p>
-          </div>
-        </div>
-
-
-    </section>
-       <!-- ======= Graph3 Section ======= -->
+    <!-- ======= Graph3 Section ======= -->
 
     <section id="graph3" class="graph3">
       <div class="container">
@@ -265,6 +252,25 @@
   <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="static/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Highchart line plot plug-ins -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+  <!-- Highcharts map plug-ins -->
+  <script src="//code.highcharts.com/maps/modules/map.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+  <script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+  <script src="https://code.highcharts.com/modules/item-series.js"></script>
+
+  <!-- Javascript index script -->
+  <script type="text/javascript" src="../static/js/index.js"></script>
 
 </body>
 
