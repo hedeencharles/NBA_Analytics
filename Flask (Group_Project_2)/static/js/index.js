@@ -1,76 +1,161 @@
 //////////////////////////////////////////////////////////////////////////////////////////
-// Loading APIs
-//////////////////////////////////////////////////////////////////////////////////////////
-
-// Load Data then call functions
-d3.json('http://127.0.0.1:5000/api/ws_birthplace ').then(function(result,error) {
-
-  console.log(result);
-
-  let ws_birthplace = result
-  heat_Map(ws_birthplace);
-
-// console.log(ws_birthplace);
-})
-
-// // Load Data then call functions
-// d3.json('http://127.0.0.1:5000/api/player_salary').then(function(result,error) {
-//
-//   let player_salary_info = result
-//   salary_Chart(player_salary_info);
-// })
-//
-//
-// // Load Data then call functions
-// d3.json('http://127.0.0.1:5000/api/player_ws').then(function(result,error) {
-//
-//   let player_WS = result
-//   ws_Chart(player_WS);
-// })
-
-
-//////////////////////////////////////////////////////////////////////////////////////////
 // Functions/Visualizations
 //////////////////////////////////////////////////////////////////////////////////////////
+Highcharts.getJSON('http://127.0.0.1:5000/api/states_winshare', function (data) {
 
-// function heat_Map(obj){
+  console.log(data)
+  // Instantiate the map
+  Highcharts.mapChart('heatmap', {
+
+    chart: {
+      map: 'countries/us/us-all',
+      borderWidth: 3,
+      borderColor: '#23aa8f'
+    },
+
+    title: {
+      text: 'Total Career Win Shares by US State (1976-2020)'
+    },
+
+    exporting: {
+      sourceWidth: 600,
+      sourceHeight: 500
+    },
+
+    legend: {
+      layout: 'horizontal',
+      borderWidth: 0,
+      backgroundColor: 'rgba(255,255,255,0.85)',
+      floating: true,
+      verticalAlign: 'top',
+      y: 25
+    },
+
+    mapNavigation: {
+      enabled: true
+    },
+
+    colorAxis: {
+          min: 1,
+          max: 5000,
+          type: 'logarithmic',
+          minColor: '#fafa6e',
+          maxColor: '#2a4858',
+          stops: [
+            [0, '#fafa6e'],
+            [0.25, '#86d780'],
+            [0.50, '#23aa8f'],
+            [0.75, '#007882'],
+            [1, '#2a4858']
+          ]
+        },
+
+    series: [{
+      animation: {
+        duration: 1000
+      },
+      data: data,
+      joinBy: ['postal-code', 'code'],
+      states: {
+          hover: {
+          borderColor: '#303030',
+          borderWidth: 4
+              }
+          },
+      dataLabels: {
+        enabled: true,
+        color: '#FFFFFF',
+        format: '{point.code}'
+      },
+      name: 'Win Shares',
+      tooltip: {
+        pointFormat: '{point.code}: {point.value}'
+      }
+    }]
+  });
+});
+
+
+
+
+
+// Highcharts.getJSON('http://127.0.0.1:5000/api/ws_birthplace', function (data) {
 //
-// var myMap = L.map("heatmap", {
-//   center: [39.8283, -98.5795],
-//   zoom: 4
+// // Make codes uppercase to match the map data
+// data.forEach(function (p) {
+//
+//   p.code = p.code;
 // });
 //
-// L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-//   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-//   tileSize: 512,
-//   maxZoom: 18,
-//   zoomOffset: -1,
-//   id: "mapbox/streets-v11",
-//   accessToken: API_KEY
-// }).addTo(myMap);
+//   // Instantiate the map
+//   Highcharts.mapChart('heatmap', {
 //
+//     chart: {
+//       map: 'countries/us/us-all',
+//       borderWidth: 1
+//     },
 //
-// obj.forEach((movie) => {
+//     title: {
+//       text: 'Total Career Win Shares by US State (1976-2020)'
+//     },
 //
-//   console.log(movie.title)
-// })
+//     exporting: {
+//       sourceWidth: 600,
+//       sourceHeight: 500
+//     },
 //
-//   var heatArray = [];
+//     legend: {
+//       layout: 'horizontal',
+//       borderWidth: 0,
+//       backgroundColor: 'rgba(255,255,255,0.85)',
+//       floating: true,
+//       verticalAlign: 'top',
+//       y: 25
+//     },
 //
-//   for (var i = 0; i < data.Birth_Place.length; i++) {
-//     var location = data[i].WS;
+//     mapNavigation: {
+//       enabled: true
+//     },
 //
-//     if (WS) {
-//       heatArray.push([data[i].latitude, data[i].longitude]);
-//     }
-//   }
+//     colorAxis: {
+//       min: 1,
+//       max: 5000,
+//       type: 'logarithmic',
+//       minColor: '#fafa6e',
+//       maxColor: '#2a4858',
+//       stops: [
+//         [0, '#fafa6e'],
+//         [0.25, '#86d780'],
+//         [0.50, '#23aa8f'],
+//         [0.75, '#007882'],
+//         [1, '#2a4858']
+//       ]
+//     },
 //
-// console.log(heatArray);
-//
-//
-//   var heat = L.heatLayer(heatArray, {
-//     radius: 20,
-//     blur: 35
-//   }).addTo(myMap);
-//
-// };
+//     series: [{
+//       animation: {
+//         duration: 1000
+//       },
+//       data: data,
+//       colorAxis: 1,
+//       nullColor: 'red',
+//       joinBy: ['name', 'birthplace'],
+//       states: {
+//           hover: {
+//               color: '#86d780',
+//               borderColor: '#303030',
+//               borderWidth: 3
+//                           }
+//                       },
+//       dataLabels: {
+//         enabled: true,
+//         color: '#FFFFFF',
+//         format: '{point.birthplace}'
+//       },
+//       name: 'Win Shares',
+//       tooltip: {
+//         pointFormat: '{point.birthplace}: {point.win_shares}'
+//       }
+//     }]
+//   });
+// });

@@ -19,7 +19,7 @@ ws_birthplace_collection = mongo.db.WSbirthplace
 ws_player_collection = mongo.db.playerWS
 player_salary_collection = mongo.db.player_salary_info
 player_birthplace_collection = mongo.db.playerBirthplace
-
+states_collection = mongo.db.ws_states
 
 #Create the Flask route for the index page
 @app.route('/')
@@ -50,5 +50,23 @@ def player_birthplace():
     return jsonify(list(player_birthplace_collection.find({ },
    { '_id': 0})))
 
-    
+# state abbreviation and win shares
+@app.route('/api/states_winshare')
+def states_winshare():
+    data = list(states_collection.find({ }, { '_id': 0}))
+    consolidated_data = []
+    for x in data:
+        if not x['abr'] == 'nan':
+            obj = {
+            'value': round(x['win_shares']),
+            'code': x['abr']
+            }
+            if obj['value'] == 0:
+                obj['value'] = 0.1
+
+            consolidated_data.append(obj)
+
+    return jsonify(consolidated_data)
+
+
 app.run(debug=True, port=5000)
