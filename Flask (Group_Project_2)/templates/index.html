@@ -9,6 +9,9 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
+  <!-- JQuery reference -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -29,6 +32,17 @@
 
   <!-- Template Main JS File -->
   <script src="static/js/main.js"></script>
+
+  <!-- Highchart line plot plug-ins -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <!-- Javascript index script -->
+  <script type="text/javascript" src="../static/js/index.js"></script>
+
 
   <!-- =======================================================
   * Template Name: Vlava - v2.1.0
@@ -127,23 +141,21 @@
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2>Graph1</h2>
-            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
+            <figure class="highcharts-figure">
+              <div id="container"></div>
+            </figure>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              In this project we looked at these questions:
+              <strong>Analysis of Avg Salary overtime:</strong>
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
-              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
-              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
-              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
+              <li><i class="ri-check-double-line"></i> The average salary per year increases relatively gradually bewteen 1990-2000</li>
+              <li><i class="ri-check-double-line"></i> Average salary on a decline from 2008-2013 (this correlates with the 2008 economic recession)</li>
+              <li><i class="ri-check-double-line"></i> Salary spikes in 2013 before falling again</li>
+              <li><i class="ri-check-double-line"></i> Salary increases at a greater rate between 2014 and 2017</li>
+              <li><i class="ri-check-double-line"></i> Compare Salary change with: <a href="https://datahub.io/core/cpi-us/view/1" target="_blank" > Inflation Graph</a></li>
             </ul>
-            <p class="font-italic">
-              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
-              — Magic Johnson
-            </p>
           </div>
         </div>
 
