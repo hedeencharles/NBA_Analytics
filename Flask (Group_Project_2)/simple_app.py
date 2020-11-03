@@ -15,8 +15,7 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
 mongo = PyMongo(app)
 
 # create variables for collections
-ws_birthplace_collection = mongo.db.WSbirthplace
-ws_player_collection = mongo.db.playerWS
+states_collection = mongo.db.ws_states
 player_salary_collection = mongo.db.player_salary_info
 player_birthplace_collection = mongo.db.playerBirthplace
 yearlyBirthplace_collection = mongo.db.yearlyBirthplace
@@ -27,22 +26,35 @@ yearlyBirthplace_collection = mongo.db.yearlyBirthplace
 def index():
     return render_template("index.html")
 
-# birthplace api
-@app.route('/api/ws_birthplace')
-def ws_birthplace():
-    return jsonify(list(ws_birthplace_collection.find({ },
-   { '_id': 0})))
+# 
+# 
+@app.route('/bar_race')
+def barRace():
+    return render_template("bar_race.html")
+
+# state abbreviation and win shares
+@app.route('/api/states_winshare')
+def states_winshare():
+    data = list(states_collection.find({ }, { '_id': 0}))
+    consolidated_data = []
+    for x in data:
+        if not x['abr'] == 'nan':
+            obj = {
+            'value': round(x['win_shares']),
+            'code': x['abr']
+            }
+            if obj['value'] == 0:
+                obj['value'] = 0.1
+
+            consolidated_data.append(obj)
+
+    return jsonify(consolidated_data)
+
 
 # player salary api
 @app.route('/api/player_salary')
 def salary_player():
     return jsonify(list(player_salary_collection.find({ },
-   { '_id': 0})))
-
-# player salary api
-@app.route('/api/player_ws')
-def ws_player():
-    return jsonify(list(ws_player_collection.find({ },
    { '_id': 0})))
 
 # player salary api
