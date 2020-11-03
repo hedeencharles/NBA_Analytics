@@ -6,10 +6,9 @@
 
 ## Questions:
 
-* Is there a correlation between a player's birthplace and NBA success?
-* Have the total number or ratio of foreign players increased since the formation of the NBA?
-* Does the regular season win share metric correlate to playoff success?
-* Do load management techniques correlate to playoff success?
+* Which states in the USA obtain the highest total WinShares (produced by players from those states)?
+* How has the average NBA salary changed overtime? 1990-2017
+* How has the diversity of the NBA players changed overtime?
 
 ## Tasks
 
@@ -52,5 +51,9 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 * Player Birthplace Data:
   https://www.kaggle.com/drgilermo/nba-players-stats/data 
 * Player WinShare:
+  https://www.basketball-reference.com/leagues
+* State abreviation: 
+  https://worldpopulationreview.com/states/state-abbreviations
+
 
   
