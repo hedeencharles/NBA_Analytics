@@ -12,6 +12,9 @@
   <!-- JQuery reference -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+  <!-- d3 reference -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -48,7 +51,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>NBA</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>NBA Statistics</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -80,8 +83,6 @@
   <<section id="hero">
     <div class="hero-container">
       <h1>NBA Analytics</h1>
-      <h2>We have put together amazing interactive graphics to illustrate data analysis on the NBA</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section>End Hero -->
 
@@ -100,16 +101,16 @@
         <div class="row content">
           <div class="col-lg-6">
             <h2>About the Creators</h2>
-            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
+            <h3>Created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
               <strong>Project Questions:</strong>
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Which states in the USA obtain the highest total WinShares (produced by players from those states)?</li>
-              <li><i class="ri-check-double-line"></i> How has the average NBA salary changed overtime? 1990-2017</li>
-              <li><i class="ri-check-double-line"></i> How has the diversity of the NBA players changed overtime?</li>
+              <li><i class="ri-check-double-line"></i> <strong>Which states in the USA obtain the highest total WinShares (produced by players from those states)?</strong></li>
+              <li><i class="ri-check-double-line"></i> <strong>How has the average NBA salary changed overtime? 1990-2017</strong></li>
+              <li><i class="ri-check-double-line"></i> <strong>How has the diversity of the NBA players changed overtime?</strong></li>
             </ul>
             <p class="font-italic">
               Ask not what your teammates can do for you. Ask what you can do for your teammates. 
@@ -132,18 +133,23 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              In this project we looked at these questions:
+              <strong>Analysis of USA Win Share Map</strong>
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
-              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
-              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
-              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
+              <li><i class="ri-check-double-line"></i> Excluding states with unusually large populations, we see that basketball Meccas (North Carolina, Indiana, and Michigan) produce top tier NBA talent.</li>
+              <li><i class="ri-check-double-line"></i> The eastern half of the United States produces far more formidable players, but that may be attributed to sheer population density.</li>
+              <li><i class="ri-check-double-line"></i> As far as total Win Shares, California has produced the most successful players in the NBA to date.</li>
+              <li><i class="ri-check-double-line"></i><strong>What is a Win Share?</strong> <br>
+                A metric that estimates the number of wins a player produces for his team. This can be calculated on its own, 
+                or by finding a player's Offensive Win Shares and Defensive Win Shares, and adding those together. This number is generally calculated using full-season statistics.
+              </li>
+              <li><i class="ri-check-double-line"></i> <strong>How to calculate Win Shares:</strong><br>
+                => (PP-0.92*LPPP*(FGA+0.44*FTA+TO))/(0.32*LPPG*(TP/LP))+(MP/TMP*TDP*(1.08*LPPP-DRtg/100)/(0.32*LPPG*(TP/LP)<br>
+                => Where PP=Points Produced, LPPP=League Points Per Possession, FGA=Field-Goal Attempts, FTA=Free-Throw Attempts, TO=Turnovers, LPPG=League Points Per Game, TP=Team Pace, 
+                LP=League Pace, MP=Minutes Played, TMP=Team Minutes Played, TDP=Team Defensive Possessions, LPPP=League Points Per Possession, 
+                DRtg=Defensive Rating, LPPG=League Points Per Game
+              </li>
             </ul>
-            <p class="font-italic">
-              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
-              — Magic Johnson
-            </p>
           </div>
         </div>
 
@@ -184,23 +190,20 @@
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2>Graph3</h2>
-            <h3>This project was created by Daniel Carter, Jarrod Williams, Charles Hedeen, Rob Savage, and Franklin Truong</h3>
+
+            <!-- <div><a href="/bar_race" target="_blank" > Bar Race Graph </a></div> -->
+
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              In this project we looked at these questions:
+              <strong>Bar Chart Race Analysis</strong>
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Is there a correlation between a player's birthplace and NBA success?</li>
-              <li><i class="ri-check-double-line"></i> Have the total number or ratio of foreign players increased since the formation of the NBA?</li>
-              <li><i class="ri-check-double-line"></i> Does the regular season win share metric correlate to playoff success?</li>
-              <li><i class="ri-check-double-line"></i> Do load management techniques correlate to playoff success?</li>
+              <li><i class="ri-check-double-line"></i> fill...</li>
+              <li><i class="ri-check-double-line"></i> fill...</li>
+              <li><i class="ri-check-double-line"></i> fill...</li>
+              <li><i class="ri-check-double-line"></i> fill...</li>
             </ul>
-            <p class="font-italic">
-              Ask not what your teammates can do for you. Ask what you can do for your teammates. 
-              — Magic Johnson
-            </p>
           </div>
         </div>
 
@@ -217,7 +220,7 @@
         <div class="row  justify-content-center">
           <div class="col-lg-6">
             <h3>NBA</h3>
-            <p>Thank you for looking at our project</p>
+            <p>Thanks for checking us out!</p>
           </div>
         </div>
 
