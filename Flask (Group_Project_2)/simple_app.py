@@ -11,7 +11,7 @@ from flask_cors import CORS
 
 #create the Flask app
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 # setup mongo db connection
 app.config["DEBUG"] = True
