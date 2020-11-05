@@ -16,6 +16,7 @@ CORS(app)
 # setup mongo db connection
 app.config["DEBUG"] = True
 
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
 app.config["MONGO_URI"] = os.environ["MONGO_URI"] 
 mongo = PyMongo(app)
 
