@@ -1,17 +1,23 @@
+# imports
+import os 
 from flask import Flask, render_template, redirect, url_for, jsonify, request
 from flask import render_template
 from flask_pymongo import PyMongo
-# from flask_cors import CORS
+
+# import updateDB
+from flask_cors import CORS
+
 
 
 #create the Flask app
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 # setup mongo db connection
 app.config["DEBUG"] = True
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
+app.config["MONGO_URI"] = os.environ["MONGO_URI"] 
 mongo = PyMongo(app)
 
 # create variables for collections
