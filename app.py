@@ -4,7 +4,7 @@ from flask import Flask, render_template, redirect, url_for, jsonify, request
 from flask import render_template
 from flask_pymongo import PyMongo
 
-import updateDB
+# import updateDB
 from flask_cors import CORS
 
 
