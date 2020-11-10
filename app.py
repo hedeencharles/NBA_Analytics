@@ -72,5 +72,5 @@ def yearly_birthplace():
     return jsonify(list(yearlyBirthplace_collection.find({ },
    { '_id': 0})))
 
-    
-app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(debug=True)
