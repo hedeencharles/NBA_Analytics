@@ -14,10 +14,13 @@ click==7.1.2
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
+dnspython==1.16.0
 entrypoints==0.3
 Flask==1.1.2
 Flask-Cors==3.0.9
 Flask-PyMongo==2.3.0
+gunicorn==20.0.4
+heroku==0.1.4
 idna==2.8
 importlib-metadata==2.0.0
 ipykernel==5.3.4
@@ -63,7 +66,7 @@ Pygments==2.7.1
 pymongo==3.11.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
-python-dateutil==2.8.1
+python-dateutil==1.5
 pytz==2019.3
 pyzmq==19.0.2
 qtconsole==4.7.7
