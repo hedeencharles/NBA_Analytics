@@ -15,7 +15,7 @@ CORS(app)
 app.config["DEBUG"] = True
 
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/nba_players_db"
-app.config["MONGO_URI"] = os.environ["MONGO_URI"] 
+app.config["MONGO_URI"] = os.environ['MONGO_URI'] 
 mongo = PyMongo(app)
 
 # create variables for collections
@@ -31,9 +31,9 @@ def index():
 
 # 
 # 
-@app.route('/bar_race')
-def barRace():
-    return render_template("bar_race.html")
+# @app.route('/bar_race')
+# def barRace():
+#     return render_template("bar_race.html")
 
 # state abbreviation and win shares
 @app.route('/api/states_winshare')
