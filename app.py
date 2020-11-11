@@ -31,9 +31,9 @@ def index():
 
 # 
 # 
-# @app.route('/bar_race')
-# def barRace():
-#     return render_template("bar_race.html")
+@app.route('/bar_race')
+def barRace():
+    return render_template("bar_race.html")
 
 # state abbreviation and win shares
 @app.route('/api/states_winshare')
