@@ -96,7 +96,7 @@ let caption = svg.append('text')
 
 let year = 1990;
 
-d3.csv('../Datasets/bar_chart_race.csv').then(function(data) {
+d3.json('https://bootcampgroupproject2.herokuapp.com/api/yearly_birthplace').then(function(data) {
    //if (error) throw error;
 
    console.log(data);
