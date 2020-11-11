@@ -19,6 +19,10 @@
 * New Javascript Library:
   * High Charts
 
+## Installing required packages
+* 'requirements.txt' file is located in the root of the repo. Open a terminal window from the root of the repo and run (this will add all necessary libraries and versions):
+  * $ pip install -r requirements.txt
+
 ## Using MongoDB
 
 Database creation code located in 'MongoDB_upload.ipynb', if run from beginning to end, the code will create a Mongo database on your local machine which will allow you to analyze the data independently.
@@ -38,6 +42,13 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
 ### Querying the database:
 * Basic querying code is available in the 'MongoDB_upload.ipynb' notebook at the bottom of the page. You will find a code block within the file that outlines how to query specific fields and values within jupyter notebook. 
 
+## Running Flask App
+* The python Flask app is located in the folder called "Flask_app"
+* Open a terminal inside this folder and run the command (which will launch the app):
+  * $ python simple_app.py
+* click on the link in the terminal to open the server in your browser (LINK: 'http://127.0.0.1:5000/').
+* Stop running the Flask app by pressing ctrl+c in the terminal.
+
 ## API
 * Each API page can be found within the drop down menu at the top of our websites home page.
 
@@ -50,6 +61,3 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
   https://www.basketball-reference.com/leagues
 * State abbreviation: 
   https://worldpopulationreview.com/states/state-abbreviations
-
-
-  
