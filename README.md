@@ -1,8 +1,7 @@
-# group_project2
-* Group Members: Charles Hedeen, Franklin Truong, Jarrod Williams and Rob Savage.
-    * Use 'virtualenv' to install requrired packages from 'requirements.txt' to run application.
-
-# PROJECT PROPOSAL
+# NBA Analysis Project
+* Group Members: Charles Hedeen, Daniel Carter, Franklin Truong, Jarrod Williams and Rob Savage.
+    * Website available through link at the top right of the page OR clone the main repo and follow instructions below.
+    * All analysis is provided on the website
 
 ## Questions:
 
@@ -12,13 +11,17 @@
 
 ## Tasks
 
-* Visualizations (JS & Python) - Rob Savage
-* Data Cleaning and Aggregation - Franklin Truong
-* Database/ETL - Charles Hedeen
-* Flask/API - Jarrod Williams
-* HTML/CSS - Daniel Carter
+* Visualizations (JS & Python) 
+* Data Cleaning and Aggregation 
+* Database/ETL 
+* Flask/API 
+* HTML/CSS 
 * New Javascript Library:
   * High Charts
+
+## Installing required packages
+* 'requirements.txt' file is located in the root of the repo. Open a terminal window from the root of the repo and run (this will add all necessary libraries and versions):
+  * $ pip install -r requirements.txt
 
 ## Using MongoDB
 
@@ -30,20 +33,24 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
   * In a new terminal window, run the command 'mongo' to initiate MongoDB
   * Keep both terminal windows open while using mongo!
 * Open the 'MongoDB Compass Community App' and click the 'Connect' button
-<!-- ![MongoDB Compass Community App Home Page](/Readme_files/Images/MongoDB_Home_Screen.png) -->
 * In the repository folder you have cloned to your machine, open Jupyter Notebook by typing 'jupyter notebook' into the command line. Verify you are in the correct directory.
 * In Jupyter Notebook, navigate to the 'MongoDB_upload.ipynb' notebook
 * Inside 'MongoDB_upload.ipynb', run the entire Kernel by clicking on the play button in the ribbon bar at the top of the window.
 * Navigate back to the 'MongoDB Compass Community App' and click the refresh button in the top left corner
-<!-- ![Refresh DB List](/Readme_files/Images/Refresh_DB_List.png) -->
 * You should now see a database titled 'nba_players_db' and within that database, and five total collection.
-<!-- ![Final Data Display](/Readme_files/Images/Final_Data_Display.png) -->
 
 ### Querying the database:
 * Basic querying code is available in the 'MongoDB_upload.ipynb' notebook at the bottom of the page. You will find a code block within the file that outlines how to query specific fields and values within jupyter notebook. 
 
+## Running Flask App
+* The python Flask app is located in the folder called "Flask_app"
+* Open a terminal inside this folder and run the command (which will launch the app):
+  * $ python simple_app.py
+* click on the link in the terminal to open the server in your browser (LINK: 'http://127.0.0.1:5000/').
+* Stop running the Flask app by pressing ctrl+c in the terminal.
+
 ## API
-* Each API page we created can be found within the drop down menu at the top of our websites home page.
+* Each API page can be found within the drop down menu at the top of our websites home page.
 
 ## Source citations:
 * Player Salary Data:
@@ -52,8 +59,5 @@ Database creation code located in 'MongoDB_upload.ipynb', if run from beginning 
   https://www.kaggle.com/drgilermo/nba-players-stats/data 
 * Player Win Share:
   https://www.basketball-reference.com/leagues
-* State abreviation: 
+* State abbreviation: 
   https://worldpopulationreview.com/states/state-abbreviations
-
-
-  
