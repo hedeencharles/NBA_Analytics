@@ -1,7 +1,7 @@
 # NBA Analysis Project
 * Group Members: Charles Hedeen, Daniel Carter, Franklin Truong, Jarrod Williams and Rob Savage.
     * Website available through link at the top right of the page OR clone the main repo and follow instructions below.
-    * All analysis is provided on the website
+    * <strong>All analysis is provided on the website</strong>
 
 ## Questions:
 
