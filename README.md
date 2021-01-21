@@ -13,8 +13,11 @@
 
 * Visualizations (JS & Python) 
 * Data Cleaning and Aggregation 
+  * [LINK to Python Notebooks](https://github.com/hedeencharles/NBA_Analytics/tree/main/Code)
 * Database/ETL 
+  * [LINK to MongoDB Upload file](https://github.com/hedeencharles/NBA_Analytics/blob/main/Code/MongoDB_upload.ipynb)
 * Flask/API 
+  * [LINK to Flask App file](https://github.com/hedeencharles/NBA_Analytics/tree/main/Flask_app)
 * HTML/CSS 
 * New Javascript Library:
   * High Charts
@@ -26,6 +29,8 @@
 ## Using MongoDB
 
 Database creation code located in 'MongoDB_upload.ipynb', if run from beginning to end, the code will create a Mongo database on your local machine which will allow you to analyze the data independently.
+
+* [LINK to MongoDB_upload.ipynb](https://github.com/hedeencharles/PostgreSQL_Database_Project/blob/master/SQL_Files%26Queries/schema.sql)
 
 ### Steps to create database on local machine (outlined in the code as well):
 * Be sure you have MongoDB installed on your machine
